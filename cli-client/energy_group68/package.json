@@ -1,0 +1,27 @@
+{
+  "name": "energy_group68",
+  "version": "1.0.0",
+  "description": "ENTSOE Datasets Management CLI",
+  "main": "index.js",
+  "preferGlobal": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "energy_group68": "./new_commands.js"
+  },
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^4.1.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.0",
+    "nock": "^12.0.2"
+  }
+}
