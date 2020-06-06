@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  /* min-height: 100px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.brand-title {
+  display: flex;
+  align-items: baseline;
+  margin: 0.5rem;
+  margin-left: 0.8rem;
+}
+
+.image-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.brand-title a{
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  font-style: monospace;
+  font-variant: small-caps;
+}
+
+.navbar-links ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  font-size: 1rem;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  margin-top: 0.2rem;
+  right: 0.5rem;
+  display: none;
+  justify-content: center;
+  /* flex-direction: column;
+  justify-content: space-between; */
+
+  /* width: 30px; */
+  /* height: 21px; */
+}
+
+.toggle-button a {
+  border: solid white;
+  border-width: 0.5px;
+}
+
+/* .toggle-button .bar {
+  height: 3px;
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+} */
+
+@media (max-width: 750px) {
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+    text-align: start
+  }
+
+  .brand-title {
+    margin: 0.5rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+}
+
+/* .cdk-overlay-container{
+  left:200px;
+  top:200px;
+} */
+
+/* .cdk-overlay-connected-position-bounding-box{
+  top:0 !important;
+
+} */
+
+/*
+#61892f -> svisto prasino
+#86c232 -> laxanoprasino
+#222629 -> (fonto) skouro gkri sxedon mavro
+#474b4f -> gkri skouro
+#6b6e70 -> gkri svisto */

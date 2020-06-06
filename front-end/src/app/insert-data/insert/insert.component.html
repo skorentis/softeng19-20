@@ -1,0 +1,61 @@
+<div style="margin-top:100px;">
+  <mat-spinner style="margin: auto" *ngIf="isLoading"></mat-spinner>
+  <mat-card *ngIf=!isLoading>
+    <mat-card-header class="centeredWrapper">
+      <mat-card-title> Insert Data Header</mat-card-title>
+    </mat-card-header>
+
+      <form [formGroup]="uploadForm" (submit)="onUpload()">
+          <mat-form-field>
+            <mat-label class="required-label">Choose a Dataset</mat-label>
+              <input
+                matInput
+                type="text"
+                placeholder="Pick one dataset"
+                id="datasetSelectInput"
+                formControlName="dataset"
+                list="datasets">
+              <datalist id="datasets">
+                <option *ngFor="let dataset of datasets"> {{ dataset }} </option>
+              </datalist>
+              <button type="button" mat-icon-button matSuffix onclick="document.getElementById('datasetSelectInput').value = ''">
+                <mat-icon>keyboard_backspace</mat-icon>
+              </button>
+          </mat-form-field>
+
+          <br>
+          <br>
+
+          <div class="file-select-and-upload">
+            <div class="file-select">
+              <!-- <div style="border: solid green"> -->
+                <button mat-stroked-button type="button" (click)="fileBrowser.click()">Choose file</button>
+                <input type="file" accept=".csv" #fileBrowser (change)="onFilePicked($event)">
+              <!-- </div> -->
+              <span class="filename-preview" *ngIf="filename !== '' && filename && uploadForm.get('csvfile').valid">
+                <b>File: </b>{{ filename }}
+              </span>
+              <span class="no-filename-preview" *ngIf="filename === '' || !filename || !uploadForm.get('csvfile').valid">
+                <b>File: </b> <i>no file chosen</i>
+              </span>
+            </div>
+
+            <span class="spacer"></span>
+
+            <div class="file-upload">
+              <button
+              style="max-height: 35px;"
+              type="submit"
+              mat-raised-button
+              color="accent"
+              [disabled]="!uploadForm.valid">
+              Upload
+            </button>
+            </div>
+
+
+          </div>
+
+      </form>
+  </mat-card>
+</div>

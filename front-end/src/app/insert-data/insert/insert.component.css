@@ -1,0 +1,88 @@
+mat-card {
+  max-width: 40rem;
+  width: 60%;
+  min-width: 22rem;
+  margin: auto;
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+
+form {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  /* padding: 50px 20px; */
+}
+
+mat-form-field {
+  width: 17rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.centeredWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.file-select-and-upload{
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.file-select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60%;
+  min-width: 17rem;
+}
+
+.file-select button {
+  width: 7rem;
+  margin-right: 1.4rem;
+}
+
+input[type='file']{
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 670px) {
+  .file-upload button {
+    width: 15rem;
+  }
+
+  .file-select-and-upload {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .file-upload {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.3rem;
+  }
+}
+
+
+
+input.ng-invalid.touched {
+  border: 1px solid red;
+}
+
+.required-label::after {
+  content: " *";
+  color:red;
+}
+
+.asterisk-before::before {
+  content: "* ";
+  color: red;
+}

@@ -1,0 +1,100 @@
+<div class="centeredWrapper" style="margin-top: 30px;">
+  <div>
+    <mat-card>
+      <!-- <mat-spinner *nfIf="isLoading"></mat-spinner> -->
+      <mat-card-header class="centeredWrapper">
+        <mat-card-title>Modify user's info</mat-card-title>
+      </mat-card-header>
+      <form [formGroup]="searchForm" (submit)="onSearch()">
+        <div class="centeredWrapper">
+          <mat-form-field>
+            <input
+              matInput
+              formControlName="username"
+              type="text"
+              placeholder="Username">
+            <mat-error *ngIf="searchForm.get('username').invalid">Please enter a valid username! Username field cannot be blank.</mat-error>
+          </mat-form-field>
+          <span class="spacer"></span>
+          <button
+            style="width: 100px; height: 40px;"
+            id="searchButton"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="!searchForm.valid">
+            Search
+          </button>
+        </div>
+      </form>
+
+      <mat-divider *ngIf="userfound"></mat-divider>
+
+      <div style="margin-top: 30px;"  *ngIf="userfound">
+        <form [formGroup]="modifyForm" (submit)="onModify()">
+          <mat-form-field class="blockdisplay">
+            <input
+              matInput
+              type="text"
+              formControlName="password"
+              placeholder="Password"
+              required>
+          </mat-form-field>
+          <mat-form-field class="blockdisplay">
+            <input
+              matInput
+              type="text"
+              formControlName="email"
+              placeholder="Email"
+              required>
+          </mat-form-field>
+          <mat-form-field class="blockdisplay">
+            <input
+              matInput
+              type="text"
+              formControlName="permission"
+              placeholder="Permission"
+              required>
+          </mat-form-field>
+          <mat-form-field class="blockdisplay">
+            <input
+              matInput
+              type="text"
+              formControlName="quota"
+              placeholder="Quota"
+              required>
+          </mat-form-field>
+          <mat-form-field class="blockdisplay">
+            <input
+              matInput
+              type="text"
+              formControlName="quota_limit"
+              placeholder="Quota Limit"
+              required>
+          </mat-form-field>
+          <div class="buttons centeredWrapper">
+            <button
+              style="width: 150px; height: 40px;"
+              id="modifyButton"
+              mat-raised-button
+              color="accent"
+              type="submit"
+              [disabled]="!modifyForm.valid">
+              Submit Changes
+            </button>
+            <span class="spacer"></span>
+            <button
+              style="width: 100px; height: 40px;"
+              id="resetModifyForm"
+              mat-raised-button
+              (click)="modifyForm.reset()">
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </mat-card>
+
+  </div>
+</div>

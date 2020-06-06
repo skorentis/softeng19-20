@@ -1,0 +1,166 @@
+
+#no-results-div {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.space-from-above {
+  padding-top: 0px;
+}
+
+#table-container {
+  position: relative;
+  overflow: auto;
+  height: 60vh;
+  width: 80vw;
+  margin: auto;
+}
+
+table {
+  border: 1px solid #dddddd;
+}
+
+table, th, td {
+  /* border: 1px solid #dddddd; */
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+tr {
+  font-size: 0.8em;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+[hidden] {
+  display: none;
+}
+
+.cavnas-container {
+  width: 100%;
+}
+
+.chart-container {
+  /* position: relative; */
+  margin: auto;
+  height: 60vh;
+  width: 80%;
+}
+
+.medium-btn-width {
+  min-width: 100px;
+}
+
+.btn3 {
+  font-size: 0.8em;
+  padding: 10px 25px;
+  color: black;
+}
+
+.btn3:hover,
+.btn3:focus {
+  cursor: pointer;
+  box-shadow: 0 0.5em 0.3em -0.4em #333;
+  transform: translateY(-0.25em);
+}
+
+.unbordered-btn {
+  border: none;
+  /* padding: 0; */
+  background: none;
+}
+
+.selected-btn {
+  -moz-box-shadow:    0 0.5em 0.3em -0.4em #333;
+  -webkit-box-shadow: 0 0.5em 0.3em -0.4em #333;
+  box-shadow:         0 0.5em 0.3em -0.4em #333;
+  font-weight: bold;
+}
+
+/* Colors for .btn and .btn-two */
+.btn.blue, .btn-two.blue     {background-color: #7fb1bf;}
+.btn.green, .btn-two.green   {background-color: #9abf7f;}
+.btn.red, .btn-two.red       {background-color: #fa5a5a;}
+.btn.purple, .btn-two.purple {background-color: #cb99c5;}
+.btn.cyan, .btn-two.cyan     {background-color: #7fccde;}
+.btn.darkcyan, .btn-two.darkcyan     {background-color: #4c91a0;}
+.btn.yellow, .btn-two.yellow {background-color: #f0d264;}
+
+.rounded {
+  border-radius: 6px;
+}
+
+/* Button two - I have no creativity for names */
+.btn-two {
+  font-size: 0.8em;
+  color: white;
+  padding: 10px 25px;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.21);
+  border-bottom-color: rgba(0,0,0,0.34);
+  text-shadow:0 1px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset,
+                    0 2px 0 -1px rgba(0,0,0,0.13),
+                    0 3px 0 -1px rgba(0,0,0,0.08),
+                    0 3px 13px -1px rgba(0,0,0,0.21);
+}
+.btn-two:active {
+  top: 1px;
+  border-color: rgba(0,0,0,0.34) rgba(0,0,0,0.21) rgba(0,0,0,0.21);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89),0 1px rgba(0,0,0,0.05) inset;
+  position: relative;
+}
+
+/* default button style */
+.btn {
+  position: relative;
+  border: 0;
+  padding: 15px 25px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+.btn:active {
+  top: 4px;
+}
+
+/* color classes for .btn */
+.btn.blue {box-shadow: 0px 4px #74a3b0;}
+.btn.blue:active {box-shadow: 0 0 #74a3b0; background-color: #709CA8;}
+
+.btn.green {box-shadow: 0px 4px 0px #87a86f;}
+.btn.green:active {box-shadow: 0 0 #87a86f; background-color: #87a86f;}
+
+.btn.red {box-shadow:0px 4px 0px #E04342;}
+.btn.red:active {box-shadow: 0 0 #ff4c4b; background-color: #ff4c4b;}
+
+.btn.purple {box-shadow:0px 4px 0px #AD83A8;}
+.btn.purple:active {box-shadow: 0 0 #BA8CB5; background-color: #BA8CB5;}
+
+.btn.cyan {box-shadow:0px 4px 0px #73B9C9;}
+.btn.cyan:active {box-shadow: 0 0 #73B9C9; background-color: #70B4C4;}
+
+.btn.yellow {box-shadow:0px 4px 0px #D1B757;}
+.btn.yellow:active {box-shadow: 0 0 #ff4c4b; background-color: #D6BB59;}
+

@@ -1,0 +1,45 @@
+<div class="big-container">
+  <div class="medium-container intro">
+    <div class="page-header">
+      <h1> Buy more Quotas</h1>
+    </div>
+    <div class="page-description">
+      <p> Be sure that you never fall short of quotas by purchasing some more! Continue using the ENTSOE datasets API as long as you need by taking one of the following deals.</p>
+    </div>
+  </div>
+  <div class="medium-container">
+    <div class="small-container">
+      <div class="content">
+        <div class="content-title">
+          <h1><span>+50</span>  quota </h1>
+          <h2> One day!</h2>
+        </div>
+        <div class="show-on-hover">
+          <p>Purchase 50 more quotas for the rest of the day! Purchased quotas expire when the clock hits 00:00.</p>
+        </div>
+      </div>
+      <button mat-button (click)="onPurchaseButton('50Q-1D','9.99')"><span>Purchase <i>€9.99</i></span></button>
+    </div>
+    <div class="small-container">
+      <div class="content">
+        <h1><span>+50</span>  quota </h1>
+        <h2> For 1 week!</h2>
+        <div class="show-on-hover">
+          <p>Purchase 50 more quotas for each day for the rest of the week! Purchased quotas expire next Monday at 00:00.</p>
+        </div>
+      </div>
+      <button mat-button (click)="onPurchaseButton('100Q-LIMIT-1W','49.99')"><span>Purchase <i>€49.99</i></span></button>
+    </div>
+    <div class="small-container">
+      <div class="content">
+        <h1><span>Unlimited</span>  quota </h1>
+        <h2> For 1 week!</h2>
+        <div class="show-on-hover">
+          <p>Purchase unlimited quotas for the rest of the week! Purchased quotas expire next Monday at 00:00.</p>
+        </div>
+      </div>
+      <button mat-button (click)="onPurchaseButton('NO-LIMIT-1W','99.99')"><span>Purchase <i>€99.99</i></span></button>
+    </div>
+  </div>
+</div>
+

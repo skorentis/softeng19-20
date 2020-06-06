@@ -1,0 +1,80 @@
+<div class="centeredWrapper" style="margin-top: 30px;">
+  <mat-card>
+    <mat-card-header class="centeredWrapper">
+      <mat-card-title >Create User</mat-card-title>
+    </mat-card-header>
+    <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
+      <mat-form-field>
+        <input
+          matInput
+          name="username"
+          type="text"
+          placeholder="Username"
+          required
+          ngModel
+          #usernameInput="ngModel">
+          <mat-error *ngIf="usernameInput.invalid">Please enter a valid username! Usernames cannot be blank.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          name="password"
+          placeholder="Password"
+          [type]="hide1 ? 'password' : 'text'"
+          required
+          ngModel
+          #passwordInput="ngModel">
+        <button
+          mat-icon-button
+          matSuffix (click)="hide1 = !hide1"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide1">
+          <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="passwordInput.invalid">Please enter a valid password!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          name="password-repeat"
+          placeholder="Repeat password"
+          [type]="hide2 ? 'password' : 'text'"
+          required>
+        <button
+          mat-icon-button
+          matSuffix (click)="hide2 = !hide2"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide2">
+          <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          name="email"
+          placeholder="Email"
+          required
+          ngModel>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          name="quota"
+          placeholder="Quota"
+          required
+          ngModel>
+      </mat-form-field>
+      <div style="margin-top: 7%;">
+        <button
+          id="signupButton"
+          mat-raised-button
+          color="accent"
+          type="submit"
+          [disabled]="!signupForm.valid">
+          Signup
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
+

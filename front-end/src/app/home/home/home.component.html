@@ -1,0 +1,152 @@
+<div id="content">
+  <mat-card>
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <div class="dataset-row">
+        <mat-form-field id="datasetSelect">
+          <mat-label class="required-label">Dataset</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Pick one dataset"
+              id="datasetSelectInput"
+              formControlName="dataset"
+              list="datasets">
+            <datalist id="datasets">
+              <option *ngFor="let dataset of datasets"> {{ dataset }} </option>
+            </datalist>
+            <button type="button" mat-icon-button matSuffix onclick="document.getElementById('datasetSelectInput').value = ''">
+              <mat-icon>keyboard_backspace</mat-icon>
+            </button>
+        </mat-form-field>
+      </div>
+
+      <div class="fields">
+        <mat-form-field appearance="standard">
+          <mat-label class="required-label">Area Name</mat-label>
+          <input
+            matInput
+            placeholder="ex. Greece"
+            formControlName="areaName"
+            list="areaNames">
+            <datalist id="areaNames">
+              <option *ngFor="let areaName of areaNames"> {{ areaName }} </option>
+            </datalist>
+          <mat-icon matPrefix>room</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="small-fields" appearance="standard" [hidden]="!(form.get('dataset').value=='Aggregated Generation Per Type')">
+          <mat-label class="required-label">Production Type</mat-label>
+          <input
+            matInput
+            placeholder="ex. Biomass"
+            formControlName="productionType"
+            list="productionTypes">
+            <datalist id="productionTypes">
+              <option *ngFor="let productionType of productionTypes"> {{ productionType }} </option>
+            </datalist>
+          <mat-icon matPrefix>merge_type</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="medium-fields" appearance="standard">
+          <mat-label class="required-label">Resolution</mat-label>
+          <input
+            matInput
+            placeholder="ex. PT60M"
+            formControlName="resolution"
+            list="resolutions">
+            <datalist id="resolutions">
+              <option *ngFor="let resolution of resolutions"> {{ resolution }} </option>
+            </datalist>
+          <mat-icon matPrefix>access_time</mat-icon>
+        </mat-form-field>
+
+        <!-- <p>[required]="dayInput.value!=='' || monthInput.value!==''" </p> -->
+        <span>
+          <mat-form-field class="small-fields" appearance="standard">
+            <mat-label [class.required-label]="(form.get('day').value || form.get('month').value)">Year</mat-label>
+            <input
+              matInput
+              placeholder="ex. 2015"
+              formControlName="year"
+              list="years">
+              <datalist id="years">
+                <option *ngFor="let year of years"> {{ year }} </option>
+              </datalist>
+            <mat-icon matPrefix>calendar_today</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="small-fields" appearance="standard">
+            <mat-label [class.required-label]="form.get('day').value">Month</mat-label>
+            <input
+              matInput
+              placeholder="ex. 2 (Feb)"
+              formControlName="month"
+              list="months">
+              <datalist id="months">
+                <option *ngFor="let month of months"> {{ month }} </option>
+              </datalist>
+            <mat-icon matPrefix>calendar_today</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="small-fields" appearance="standard">
+            <mat-label>Day</mat-label>
+            <input
+              matInput
+              placeholder="ex. 15"
+              formControlName="day"
+              list="days">
+              <datalist id="days">
+                <option *ngFor="let day of days"> {{ day }} </option>
+              </datalist>
+            <mat-icon matPrefix>calendar_today</mat-icon>
+          </mat-form-field>
+        </span>
+
+
+        <!-- <span style="width:13%" *ngIf="form.get('dataset').value!='Aggregated Generation Per Type'" ></span> -->
+      </div>
+
+      <div>
+        <mat-form-field class="small-fields" appearance="standard">
+          <mat-label>format</mat-label>
+          <select matNativeControl formControlName="format">
+            <option value="json">JSON</option>
+            <option value="csv">csv</option>
+          </select>
+        </mat-form-field>
+      </div>
+
+      <div class="bottom-row">
+        <span style="min-width: 180px;" class="asterisk-before">
+          Fields are mandatory
+        </span>
+        <span class="spacer"></span>
+        <div class="buttonGroup">
+          <button
+            mat-raised-button
+            (click)="form.reset()">
+            Reset
+          </button>
+          <button
+            id="searchButton"
+            (click)="scroll(resultsArea)"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="!form.valid">
+            Search
+          </button>
+
+        </div>
+      </div>
+
+    </form>
+  </mat-card>
+
+  <!-- <hr> -->
+  <div #resultsArea>
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+

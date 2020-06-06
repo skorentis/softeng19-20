@@ -1,0 +1,58 @@
+<div class="centeredWrapper" style="margin-top: 100px;">
+  <mat-card>
+    <div class="logo-container">
+      <img src="../../../assets/images/meowthlogo.png">
+    </div>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <mat-card-header class="centeredWrapper">
+      <mat-card-title> <span>Login</span></mat-card-title>
+    </mat-card-header>
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+      <mat-form-field>
+        <input
+          matInput
+          name="username"
+          type="text"
+          placeholder="Username"
+          required
+          ngModel
+          #usernameInput="ngModel">
+        <mat-error *ngIf="usernameInput.invalid">Please enter a valid username!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          name="password"
+          placeholder="Password"
+          [type]="hide ? 'password' : 'text'"
+          required
+          ngModel
+          #passwordInput="ngModel">
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="passwordInput.invalid">Please enter a valid password!</mat-error>
+      </mat-form-field>
+      <div class="centeredWrapper" style="margin-top:7%">
+        <button
+          id="loginButton"
+          mat-raised-button
+          color="accent"
+          type="submit"
+          [disabled]="!loginForm.valid">
+          Login
+        </button>
+      </div>
+      <!-- <div class="centeredWrapper">
+        <p>Don't have an account? <a routerLink="/signup" routerLinkActive="mat-accent">Sign up here!</a></p>
+      </div> -->
+    </form>
+  </mat-card>
+
+</div>

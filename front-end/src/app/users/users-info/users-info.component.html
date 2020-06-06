@@ -1,0 +1,55 @@
+<div class="centeredWrapper" style="margin-top: 30px;">
+  <div>
+    <mat-card>
+      <!-- <mat-spinner *nfIf="isLoading"></mat-spinner> -->
+      <mat-card-header class="centeredWrapper">
+        <mat-card-title>Search user's info</mat-card-title>
+      </mat-card-header>
+      <form [formGroup]="searchForm" (submit)="onSearch()">
+        <div class="centeredWrapper">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              formControlName="username"
+              placeholder="Username">
+            <mat-error *ngIf="searchForm.get('username').invalid">Please enter a valid username! Username field cannot be blank.</mat-error>
+          </mat-form-field>
+          <span class="spacer"></span>
+          <button
+            style="width: 100px; height: 40px;"
+            id="searchButton"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="!searchForm.valid">
+            Search
+          </button>
+        </div>
+      </form>
+
+      <mat-divider *ngIf="userfound"></mat-divider>
+
+      <div class="centeredWrapper flexend" *ngIf="userfound" >
+        <mat-list role="list">
+          <mat-list-item role="listitem">Username: {{ user.username }}</mat-list-item>
+          <mat-list-item role="listitem">Password: {{ user.password }}</mat-list-item>
+          <mat-list-item role="listitem">Email: {{ user.email }}</mat-list-item>
+          <mat-list-item role="listitem">Permission: {{ user.permission }}</mat-list-item>
+          <mat-list-item role="listitem">Quota: {{ user.quota }}</mat-list-item>
+          <mat-list-item role="listitem">Quota Limit: {{ user.quota_limit }}</mat-list-item>
+
+        </mat-list>
+        <span class="spacer"></span>
+        <button
+          mat-raised-button
+          (click)="toModifyUrl()">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+
+
+    </mat-card>
+
+  </div>
+</div>

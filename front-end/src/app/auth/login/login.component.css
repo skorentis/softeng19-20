@@ -1,0 +1,56 @@
+mat-card {
+  width: 50vw;
+  max-width: 650px;
+  min-width: 300px;
+  border-radius: 20px;
+  /* position: fixed; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+mat-form-field{
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 140px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+mat-card-header {
+  margin-top: 30px;
+}
+
+mat-card-title span{
+  padding: 1rem;
+  font-size: 2rem;
+  font-style: monospace;
+  font-variant: small-caps;
+}
+
+.centeredWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#loginButton {
+  width: 40%;
+  font-size: 1.2em;
+}
+
+input.ng-invalid.touched {
+  border: 1px solid red;
+}

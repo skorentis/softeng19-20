@@ -1,0 +1,42 @@
+<div class="centeredWrapper wrapper">
+  <nav mat-tab-nav-bar id="tabs">
+    <a mat-tab-link
+       *ngFor="let link of navLinks"
+       [routerLink]="link.path"
+       routerLinkActive #rla="routerLinkActive"
+       [active]="rla.isActive"
+       class="big_font">
+      {{link.label}}
+    </a>
+  </nav>
+
+  <button
+    class="small-menu"
+    mat-button
+    color="white"
+    [matMenuTriggerFor]="usersMenu">
+    <span>
+      <mat-icon>
+        keyboard_arrow_down
+      </mat-icon>
+      {{ activeItem ? activeItem : '-- choose action --'}}
+    </span>
+  </button>
+  <mat-menu #usersMenu="matMenu">
+    <a
+      mat-menu-item
+      *ngFor="let link of navLinks"
+      [routerLink]="link.path"
+      class="big_font"
+      (click)="setActiveItem(link.label)">
+      <mat-icon>
+        {{ link.icon }}
+      </mat-icon>
+      {{link.label}}
+    </a>
+  </mat-menu>
+</div>
+
+
+
+<router-outlet></router-outlet>

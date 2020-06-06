@@ -1,0 +1,43 @@
+<div id="no-results-div" *ngIf="!result">
+  <mat-icon>sentiment_dissatisfied</mat-icon><span style="width: 10px;"></span><p>Sorry, no results were found</p>
+</div>
+<div>
+  <mat-toolbar style="margin: 5px; background-color: inherit;" [hidden]="!result">
+    <span style="width: 24%; min-width:30px;"></span>
+    <span style="font-size: 2em; color: #333"> Actual Total Load </span>
+    <span class="spacer"></span>
+    <span>
+      <!-- <button (click)="graph=false; table=true;" class="btn-two cyan rounded" [class.darkcyan]="table"> Table <mat-icon>table_chart</mat-icon> </button>
+      <button (click)="table=false; graph=true;" class="btn-two cyan rounded" [class.darkcyan]="graph"> Graph <mat-icon>show_chart</mat-icon></button> -->
+      <button (click)="graph=false; table=true;" class="btn3 unbordered-btn medium-btn-width" [class.selected-btn]="table"> Table <mat-icon>table_chart</mat-icon> </button>
+      <button (click)="table=false; graph=true;" class="btn3 unbordered-btn medium-btn-width" [class.selected-btn]="graph"> Chart <mat-icon>multiline_chart</mat-icon></button>
+    </span>
+    <span style="width: 10%; min-width:30px;"></span>
+  </mat-toolbar>
+
+  <!-- Table -->
+  <!-- <mat-card id="table-container"> -->
+  <!-- <mat-card id="table-container" [hidden]="!table"> -->
+
+  <div id="table-container" [hidden]="graph" class="space-from-above">
+    <table *ngIf="queryResult.length > 0">
+      <tr>
+        <th *ngFor="let column of columns;"> {{ column }}</th>
+        <!-- <th *ngFor="let column of columns;"> Column </th> -->
+      </tr>
+      <tr *ngFor="let result of queryResult">
+        <td *ngFor="let column of columns;">{{ result[column] }}</td>
+        <!-- <td *ngFor="let column of columns;">{{ result }}</td> -->
+      </tr>
+    </table>
+  </div>
+  <div [hidden]="!graph" class="cavnas-container">
+    <div id="cavnas" class="chart-container"></div>
+  </div>
+</div>
+
+
+
+
+
+

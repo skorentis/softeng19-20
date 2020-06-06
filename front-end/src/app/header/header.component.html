@@ -1,0 +1,49 @@
+
+<nav class="navbar">
+  <div class="brand-title">
+    <a class="routerLink" [routerLink]="resultsExist ? '/home/result' : '/'">
+      <img class="image-logo" src="../../assets/images/meowthlogo.png">
+      Team Rocket
+    </a>
+  </div>
+  <div class="toggle-button" *ngIf="userIsAuthenticated">
+    <a class="toggle-button" mat-button (click)="onNavMenuToggle()">
+      <mat-icon>menu</mat-icon>
+    </a>
+  </div>
+  <div class="navbar-links" *ngIf="navMenuOpen">
+    <ul>
+      <li>
+        <a routerLink="/home/result" mat-button *ngIf="userIsAuthenticated">Home</a>
+      </li>
+      <li>
+        <a routerLink="/payment" mat-button *ngIf="userIsAuthenticated">Shop</a>
+      </li>
+      <li>
+        <a mat-button [matMenuTriggerFor]="usersMenu" *ngIf="userIsAuthenticated">Users<mat-icon>keyboard_arrow_down</mat-icon></a>
+        <mat-menu #usersMenu="matMenu">
+          <a routerLink="/users/signup" mat-menu-item><mat-icon>person_add</mat-icon>Add new user</a>
+          <a routerLink="/users/user" mat-menu-item><mat-icon>info</mat-icon>Get user's info</a>
+          <a routerLink="/users/modify" mat-menu-item><mat-icon>edit</mat-icon>Edit user's info</a>
+        </mat-menu>
+      </li>
+      <li>
+        <a routerLink="/insertdata" mat-button *ngIf="userIsAuthenticated">Insert new data</a>
+      </li>
+      <li>
+        <a
+          mat-button
+          [matMenuTriggerFor]="accountMenu"
+          *ngIf="userIsAuthenticated">
+          <mat-icon id="account">account_circle</mat-icon>
+          <span style="font-style: italic;">{{ currentUsername }} </span>
+        </a>
+        <mat-menu #accountMenu="matMenu">
+          <!-- <a routerLink="/users/user" mat-menu-item><mat-icon></mat-icon>My profile</a> -->
+          <a mat-menu-item (click)="onLogout()"><mat-icon>exit_to_app</mat-icon>Logout</a>
+        </mat-menu>
+      </li>
+    </ul>
+
+  </div>
+</nav>

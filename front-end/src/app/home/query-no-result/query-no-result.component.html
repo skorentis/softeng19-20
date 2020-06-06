@@ -1,0 +1,39 @@
+<div class="instructions">
+  <h2>How to fill in the form:</h2>
+  <p>Fill in the form above as explained in the following instructions.</p>
+  <table>
+    <tr>
+      <th>Field</th>
+      <th>Accepted values</th>
+    </tr>
+    <tr style="border-top: solid black 1px;">
+      <td [attr.rowspan]="dataset.length+1">Dataset</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let data of dataset">
+      <td> {{ data }} </td>
+    </tr>
+    <tr style="border-top: solid black 1px;">
+      <td [attr.rowspan]="areaNames.length+1">Resolution Code</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let area of areaNames">
+      <td> {{ area }} </td>
+    </tr>
+    <tr style="border-top: solid black 1px;">
+      <td [attr.rowspan]="productionType.length+1">Production Type</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let type of productionType">
+      <td> {{ type }} </td>
+    </tr>
+    <tr style="border-top: solid black 1px;">
+      <td [attr.rowspan]="resolutionType.length+1">Resolution Code</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let restype of resolutionType">
+      <td> {{ restype }} </td>
+    </tr>
+
+  </table>
+</div>
