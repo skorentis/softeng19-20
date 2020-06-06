@@ -1,0 +1,122 @@
+[
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "1",
+        "ActualTotalLoadByDayValue": 126713.45
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "2",
+        "ActualTotalLoadByDayValue": 137520.03
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "3",
+        "ActualTotalLoadByDayValue": 146809.27
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "4",
+        "ActualTotalLoadByDayValue": 157347.52
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "5",
+        "ActualTotalLoadByDayValue": 155545.09
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "6",
+        "ActualTotalLoadByDayValue": 138863.69
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "7",
+        "ActualTotalLoadByDayValue": 136585.96
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "8",
+        "ActualTotalLoadByDayValue": 150960.86
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "9",
+        "ActualTotalLoadByDayValue": 153554.32
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "10",
+        "ActualTotalLoadByDayValue": 4859.16
+    }
+]

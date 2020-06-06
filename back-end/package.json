@@ -1,0 +1,30 @@
+{
+  "name": "entso-e",
+  "version": "1.1.0",
+  "description": "softeng19-20_project",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha testing/*",
+    "start": "node app.js"
+  },
+  "author": "Ομάδα Πύραυλος",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "csv-parser": "^2.3.2",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "json-2-csv": "^3.5.9",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^7.1.0",
+    "mongoose": "^5.8.7",
+    "node-cron": "^2.0.3",
+    "request": "^2.88.0",
+    "sha256": "^0.2.0",
+    "stripe": "^8.20.0",
+    "supertest": "^4.0.2"
+  }
+}

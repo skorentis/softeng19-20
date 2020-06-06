@@ -1,0 +1,13 @@
+[
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "DayAheadTotalLoadForecastByMonthValue": 1306793
+    }
+]

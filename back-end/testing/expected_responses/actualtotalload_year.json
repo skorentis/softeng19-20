@@ -1,0 +1,13 @@
+[
+    {
+        "Source": "entso-e",
+        "Dataset": "ActualTotalLoad",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "ActualTotalLoadByMonthValue": 1308759.35
+    }
+]

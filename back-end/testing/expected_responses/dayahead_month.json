@@ -1,0 +1,122 @@
+[
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "1",
+        "DayAheadTotalLoadForecastByDayValue": 129831
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "2",
+        "DayAheadTotalLoadForecastByDayValue": 139519
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "3",
+        "DayAheadTotalLoadForecastByDayValue": 149823
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "4",
+        "DayAheadTotalLoadForecastByDayValue": 153155
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "5",
+        "DayAheadTotalLoadForecastByDayValue": 152644
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "6",
+        "DayAheadTotalLoadForecastByDayValue": 132920
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "7",
+        "DayAheadTotalLoadForecastByDayValue": 137813
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "8",
+        "DayAheadTotalLoadForecastByDayValue": 151828
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "9",
+        "DayAheadTotalLoadForecastByDayValue": 154353
+    },
+    {
+        "Source": "entso-e",
+        "Dataset": "DayAheadTotalLoadForecast",
+        "AreaName": "Greece",
+        "AreaTypeCode": "CTY",
+        "MapCode": "GR",
+        "ResolutionCode": "PT60M",
+        "Year": "2018",
+        "Month": "1",
+        "Day": "10",
+        "DayAheadTotalLoadForecastByDayValue": 4907
+    }
+]

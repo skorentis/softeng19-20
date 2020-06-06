@@ -1,0 +1,8 @@
+{
+  "development": {
+    "port": 8765,
+    "MONGODB_URI": "mongodb://localhost:27017/entsoe",
+    "baseURL": "/energy/api",
+    "default_quota_val": 50
+  }
+}
