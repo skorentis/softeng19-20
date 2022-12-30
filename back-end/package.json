@@ -19,7 +19,7 @@
     "https": "^1.0.0",
     "json-2-csv": "^3.5.9",
     "jsonwebtoken": "^8.5.1",
-    "mocha": "^7.1.0",
+    "mocha": "^10.2.0",
     "mongoose": "^5.8.7",
     "node-cron": "^2.0.3",
     "request": "^2.88.0",
